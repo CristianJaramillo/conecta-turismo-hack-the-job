@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.8.19 on 2019-05-29 18:21:40.
+ * Generated for Laravel 5.8.19 on 2019-06-13 05:16:11.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -14543,6 +14543,297 @@ namespace Illuminate\Support {
  
 }
 
+namespace App\Facades { 
+
+    /**
+     * Class FlightDetailFacade
+     *
+     * @package App\Facades
+     */ 
+    class FlightDetailFacade {
+        
+        /**
+         * 
+         *
+         * @return array|mixed 
+         * @static 
+         */ 
+        public static function findAll()
+        {
+            //Method inherited from \App\Repositories\LowFareSearchRepository            
+                        /** @var \App\Repositories\FlightDetailRepository $instance */
+                        return $instance->findAll();
+        }
+        
+        /**
+         * 
+         *
+         * @param $id
+         * @return mixed 
+         * @static 
+         */ 
+        public static function findById($id)
+        {
+            //Method inherited from \App\Repositories\LowFareSearchRepository            
+                        /** @var \App\Repositories\FlightDetailRepository $instance */
+                        return $instance->findById($id);
+        }
+        
+        /**
+         * 
+         *
+         * @return int 
+         * @static 
+         */ 
+        public static function count()
+        {
+            //Method inherited from \App\Repositories\LowFareSearchRepository            
+                        /** @var \App\Repositories\FlightDetailRepository $instance */
+                        return $instance->count();
+        }
+         
+    }
+
+    /**
+     * 
+     *
+     */ 
+    class AirPricingInfoFacade {
+        
+        /**
+         * 
+         *
+         * @return array|mixed 
+         * @static 
+         */ 
+        public static function findAll()
+        {
+            //Method inherited from \App\Repositories\LowFareSearchRepository            
+                        /** @var \App\Repositories\AirPricingInfoRepository $instance */
+                        return $instance->findAll();
+        }
+        
+        /**
+         * 
+         *
+         * @param $id
+         * @return mixed 
+         * @static 
+         */ 
+        public static function findById($id)
+        {
+            //Method inherited from \App\Repositories\LowFareSearchRepository            
+                        /** @var \App\Repositories\AirPricingInfoRepository $instance */
+                        return $instance->findById($id);
+        }
+        
+        /**
+         * 
+         *
+         * @return int 
+         * @static 
+         */ 
+        public static function count()
+        {
+            //Method inherited from \App\Repositories\LowFareSearchRepository            
+                        /** @var \App\Repositories\AirPricingInfoRepository $instance */
+                        return $instance->count();
+        }
+         
+    }
+
+    /**
+     * 
+     *
+     */ 
+    class AirSegmentFacade {
+        
+        /**
+         * 
+         *
+         * @return array|mixed 
+         * @static 
+         */ 
+        public static function findAll()
+        {
+            //Method inherited from \App\Repositories\LowFareSearchRepository            
+                        /** @var \App\Repositories\AirSegmentRepository $instance */
+                        return $instance->findAll();
+        }
+        
+        /**
+         * 
+         *
+         * @param $id
+         * @return mixed 
+         * @static 
+         */ 
+        public static function findById($id)
+        {
+            //Method inherited from \App\Repositories\LowFareSearchRepository            
+                        /** @var \App\Repositories\AirSegmentRepository $instance */
+                        return $instance->findById($id);
+        }
+        
+        /**
+         * 
+         *
+         * @return int 
+         * @static 
+         */ 
+        public static function count()
+        {
+            //Method inherited from \App\Repositories\LowFareSearchRepository            
+                        /** @var \App\Repositories\AirSegmentRepository $instance */
+                        return $instance->count();
+        }
+         
+    }
+
+    /**
+     * 
+     *
+     */ 
+    class AirPricingGroupFacade {
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function findAll()
+        {
+            //Method inherited from \App\Repositories\AirAvailRepository            
+                        /** @var \App\Repositories\AirPricingGroupRepository $instance */
+                        return $instance->findAll();
+        }
+        
+        /**
+         * 
+         *
+         * @param $id
+         * @return mixed 
+         * @static 
+         */ 
+        public static function findById($id)
+        {
+            //Method inherited from \App\Repositories\AirAvailRepository            
+                        /** @var \App\Repositories\AirPricingGroupRepository $instance */
+                        return $instance->findById($id);
+        }
+        
+        /**
+         * 
+         *
+         * @return int 
+         * @static 
+         */ 
+        public static function count()
+        {
+            //Method inherited from \App\Repositories\AirAvailRepository            
+                        /** @var \App\Repositories\AirPricingGroupRepository $instance */
+                        return $instance->count();
+        }
+         
+    }
+
+    /**
+     * 
+     *
+     */ 
+    class AirItineraryFacade {
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function findAll()
+        {
+            //Method inherited from \App\Repositories\AirAvailRepository            
+                        /** @var \App\Repositories\AirItineraryRepository $instance */
+                        return $instance->findAll();
+        }
+        
+        /**
+         * 
+         *
+         * @param $id
+         * @return mixed 
+         * @static 
+         */ 
+        public static function findById($id)
+        {
+            //Method inherited from \App\Repositories\AirAvailRepository            
+                        /** @var \App\Repositories\AirItineraryRepository $instance */
+                        return $instance->findById($id);
+        }
+        
+        /**
+         * 
+         *
+         * @return int 
+         * @static 
+         */ 
+        public static function count()
+        {
+            //Method inherited from \App\Repositories\AirAvailRepository            
+                        /** @var \App\Repositories\AirItineraryRepository $instance */
+                        return $instance->count();
+        }
+         
+    }
+
+    /**
+     * 
+     *
+     */ 
+    class AirPricingSolutionFacade {
+        
+        /**
+         * 
+         *
+         * @return array|mixed 
+         * @static 
+         */ 
+        public static function findAll()
+        {
+            //Method inherited from \App\Repositories\LowFareSearchRepository            
+                        /** @var \App\Repositories\AirPricingSolutionRepository $instance */
+                        return $instance->findAll();
+        }
+        
+        /**
+         * 
+         *
+         * @param $id
+         * @return mixed 
+         * @static 
+         */ 
+        public static function findById($id)
+        {
+            //Method inherited from \App\Repositories\LowFareSearchRepository            
+                        /** @var \App\Repositories\AirPricingSolutionRepository $instance */
+                        return $instance->findById($id);
+        }
+        
+        /**
+         * 
+         *
+         * @return int 
+         * @static 
+         */ 
+        public static function count()
+        {
+            //Method inherited from \App\Repositories\LowFareSearchRepository            
+                        /** @var \App\Repositories\AirPricingSolutionRepository $instance */
+                        return $instance->count();
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -17195,6 +17486,18 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
 
     class View extends \Illuminate\Support\Facades\View {}
+
+    class FlightDetailRepository extends \App\Facades\FlightDetailFacade {}
+
+    class AirPricingInfoRepository extends \App\Facades\AirPricingInfoFacade {}
+
+    class AirSegmentRepository extends \App\Facades\AirSegmentFacade {}
+
+    class AirPricingGroupRepository extends \App\Facades\AirPricingGroupFacade {}
+
+    class AirItineraryRepository extends \App\Facades\AirItineraryFacade {}
+
+    class AirPricingSolutionRepository extends \App\Facades\AirPricingSolutionFacade {}
  
 }
 

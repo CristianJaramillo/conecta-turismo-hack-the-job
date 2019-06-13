@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\AirPricingGroup;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class FlightResource extends JsonResource
@@ -14,9 +15,15 @@ class FlightResource extends JsonResource
      */
     public function toArray($request)
     {
+
+        $journeys = array();
+
+        foreach ($this->resource as $item)
+            $journeys[] = new JourneyResource($item);
+
         return [
-            "journeys" => JourneyResource::collection($request['journeys']),
-            "option" => new OptionResource($request['option'])
+            "journeys" => $journeys,
+            "options" => null
         ];
     }
 }

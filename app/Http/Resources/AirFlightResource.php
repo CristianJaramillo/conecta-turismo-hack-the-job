@@ -2,9 +2,10 @@
 
 namespace App\Http\Resources;
 
+use App\Repositories\FlightDetailRepository;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ContentResource extends JsonResource
+class AirFlightResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,8 +16,8 @@ class ContentResource extends JsonResource
     public function toArray($request)
     {
         return [
-            "count" => $request['count'],
-            "flights" => FlightResource::collection($request['fligts'])
+            "count" => count($this->resource),
+            "flights" => new FlightResource($this->resource)
         ];
     }
 }
