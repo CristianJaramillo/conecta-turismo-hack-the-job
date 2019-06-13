@@ -15,7 +15,7 @@ class AirlineResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'code' => $request['code']
+            'code' => $this->resource['Carrier']
         ];
     }
 }

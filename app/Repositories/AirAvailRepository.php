@@ -15,8 +15,11 @@ use SimpleXMLElement;
  * Class AirAvailRepository
  * @package App\Repositories
  */
-class AirAvailRepository implements Repository
+abstract class AirAvailRepository implements Repository
 {
+
+    protected $tagName;
+    protected $key;
     private $airAvailSearchResponse;
 
     /**
@@ -32,11 +35,26 @@ class AirAvailRepository implements Repository
     }
 
 
-    /**
-     * @return mixed
-     */
     function findAll()
     {
-        return $this->airAvailSearchResponse->AirAvailSearchResult;
+        return simpleXmlElement2Array($this->airAvailSearchResponse->AirAvailSearchResult->AirAvail->{$this->tagName}[0]);
     }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    function findById($id)
+    {
+        return collect($this->findAll())->firstWhere($this->key, $id);
+    }
+
+    /**
+     * @return int
+     */
+    function count() : int
+    {
+        return collect($this->findAll())->count();
+    }
+
 }

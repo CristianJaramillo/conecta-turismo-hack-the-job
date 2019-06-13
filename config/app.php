@@ -175,6 +175,14 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        \App\Providers\FlightDetailServiceProvider::class,
+        \App\Providers\AirSegmentServiceProvider::class,
+        \App\Providers\AirPricingInfoServiceProvider::class,
+
+        \App\Providers\AirPricingGroupServiceProvider::class,
+        \App\Providers\AirItineraryServiceProvider::class,
+        \App\Providers\AirPricingSolutionProvider::class,
+
     ],
 
     /*
@@ -225,6 +233,15 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'FlightDetailRepository' => \App\Facades\FlightDetailFacade::class,
+        'AirPricingInfoRepository' => \App\Facades\AirPricingInfoFacade::class,
+        'AirSegmentRepository' => \App\Facades\AirSegmentFacade::class,
+
+        'AirPricingGroupRepository' => \App\Facades\AirPricingGroupFacade::class,
+        'AirItineraryRepository' => \App\Facades\AirItineraryFacade::class,
+        'AirPricingSolutionRepository' => \App\Facades\AirPricingSolutionFacade::class,
+
 
     ],
 

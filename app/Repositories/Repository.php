@@ -20,4 +20,15 @@ interface Repository
      */
     function findAll();
 
+    /**
+     * @param $id
+     * @return mixed
+     */
+    function findById($id);
+
+    /**
+     * @return int
+     */
+    function  count() : int;
+
 }

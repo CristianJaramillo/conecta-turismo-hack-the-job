@@ -13,13 +13,17 @@
 
 Route::get('/', function () {
 
-    // dd(storage_path('app/response2.xml'));
 
-    $file = File::get(storage_path('app/response.xml'));
-    $xml  = new SimpleXMLElement($file);
-    // $xml->registerXPathNamespace("s", "http://schemas.xmlsoap.org/soap/envelope/");
-    // $body = $xml->xpath('s:Body');
-    dd($xml);
+    dd((new \App\Repositories\AirPricingGroupRepository())->count());
 
-    return view('welcome');
+    $doc = new DomDocument;
+    $doc->validateOnParse = true;
+    $doc->Load(storage_path('app/response.xml'));
+    return [
+        FlightDetailRepository::count(),
+        $doc->getElementsByTagName("AirSegment")->count(),
+        $doc->getElementsByTagName("FareInfo")->count(),
+        $doc->getElementsByTagName("Route")->count(),
+        $doc->getElementsByTagName("AirPricingSolution")->count()
+    ];
 });

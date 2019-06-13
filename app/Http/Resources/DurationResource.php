@@ -14,6 +14,12 @@ class DurationResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+
+        $minutes = $this->resource['FlightTime'];
+
+        return [
+            'hours' => intval($minutes / 60),
+            'minutes' => $minutes % 60
+        ];
     }
 }

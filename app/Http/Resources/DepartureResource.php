@@ -9,15 +9,19 @@ class DepartureResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return array
+     * @throws \Exception
      */
     public function toArray($request)
     {
-        require [
-            'airport' => new AirportResource($request['airport']),
-            'date' => $request['date'],
-            'time' => $request['time']
+        $dateTime = new \DateTime(data_get($this->resource, 'DepartureTime'));
+        return [
+            'airport' => [
+                'code' => $this->resource['Origin']
+            ],
+            'date' => $dateTime->format('Y-m-d'),
+            'time' => $dateTime->format('h:i:s')
         ];
     }
 }
